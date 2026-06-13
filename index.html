@@ -5,39 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yunus Emre Gedik | Game Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Girişte yumuşak bir açılış animasyonu için */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+    </style>
 </head>
-<body class="bg-black text-white font-sans">
+<body class="bg-black text-white font-sans selection:bg-neutral-800 selection:text-white">
 
-    <!-- Header -->
-    <header class="p-10 text-center">
-        <h1 class="text-4xl font-bold uppercase tracking-widest">Yunus Emre Gedik</h1>
-        <p class="text-gray-400 mt-2">Roblox Developer | Lua Scripter</p>
+    <!-- Header (Giriş Animasyonlu) -->
+    <header class="p-16 text-center animate-fade-in">
+        <h1 class="text-4xl md:text-5xl font-bold uppercase tracking-widest bg-gradient-to-r from-white via-neutral-400 to-white bg-clip-text text-transparent">
+            Yunus Emre Gedik
+        </h1>
+        <p class="text-gray-400 mt-3 text-lg tracking-wide font-light">Roblox Developer | Lua Scripter</p>
     </header>
 
-    <!-- Main Section -->
-    <main class="max-w-4xl mx-auto p-5">
-        <section class="mb-12">
-            <h2 class="text-2xl mb-4 border-b border-gray-800 pb-2">Hakkımda</h2>
-            <p class="text-gray-300">İstanbul'da yaşayan bir oyun geliştiricisiyim. Roblox platformu üzerinde psikolojik korku ve sürükleyici deneyimler üzerine çalışıyorum. Kod yazmak benim için sadece iş değil, bir tutku.</p>
+    <!-- Ana Konteyner -->
+    <main class="max-w-4xl mx-auto p-6 space-y-16 animate-fade-in" style="animation-delay: 0.2s;">
+        
+        <!-- Hakkımda Bölümü -->
+        <section class="border-b border-neutral-900 pb-10">
+            <h2 class="text-xl font-medium tracking-widest uppercase text-neutral-400 mb-4 flex items-center gap-2">
+                <span class="w-2 h-2 bg-white rounded-full inline-block"></span> Hakkımda
+            </h2>
+            <p class="text-neutral-300 leading-relaxed text-lg font-light">
+                İstanbul'da yaşayan sıradan bir oyun geliştiricisiyim. Roblox platformu üzerinde psikolojik korku ve sürükleyici deneyimler üzerine çalışıyorum. Deneyimlemek isterseniz oyunum ve diğer sosyal medya hesaplarım hemen hemen altta.
+            </p>
         </section>
 
-        <!-- Projects -->
-        <section>
-            <h2 class="text-2xl mb-6 border-b border-gray-800 pb-2">Projelerim</h2>
+        <!-- Projelerim Bölümü (Kartlar Animasyonlu) -->
+        <section class="space-y-6">
+            <h2 class="text-xl font-medium tracking-widest uppercase text-neutral-400 flex items-center gap-2">
+                <span class="w-2 h-2 bg-blue-500 rounded-full inline-block animate-pulse"></span> Projelerim
+            </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Project Card -->
-                <div class="bg-neutral-900 p-6 rounded-lg border border-neutral-800 hover:border-white transition">
-                    <h3 class="text-xl font-semibold mb-2">The Pier: Endless Depths</h3>
-                    <p class="text-gray-400 mb-4">Psikolojik korku türünde Roblox projem.</p>
-                    <a href="ROBLOX_LINKIN_BURAYA" class="text-blue-400 hover:underline">Oyuna Git →</a>
+                <!-- Proje Kartı -->
+                <div class="group relative bg-neutral-950 p-6 rounded-xl border border-neutral-900 transform transition-all duration-300 hover:-translate-y-2 hover:border-neutral-500 hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)]">
+                    <h3 class="text-xl font-semibold mb-2 group-hover:text-blue-400 transition-colors">The Pier: Endless Depths</h3>
+                    <p class="text-neutral-400 mb-6 font-light">Psikolojik korku türünde Roblox projem.</p>
+                    <a href="https://www.roblox.com/games/104035534286177/The-Pier" target="_blank" class="inline-flex items-center text-blue-400 font-medium group-hover:translate-x-2 transition-transform duration-300">
+                        Oyuna Git <span class="ml-2">→</span>
+                    </a>
                 </div>
             </div>
         </section>
+
+        <!-- Sosyal Medya Hesaplarım -->
+        <section class="space-y-6">
+            <h2 class="text-xl font-medium tracking-widest uppercase text-neutral-400 flex items-center gap-2">
+                <span class="w-2 h-2 bg-purple-500 rounded-full inline-block animate-pulse"></span> Sosyal Medya
+            </h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/yunovax/" target="_blank" class="flex items-center justify-between p-4 bg-neutral-950 border border-neutral-900 rounded-lg transition-all duration-300 hover:bg-neutral-900 hover:border-neutral-400 group">
+                    <span class="text-neutral-300 group-hover:text-white font-light">Instagram</span>
+                    <span class="text-neutral-600 group-hover:text-white transition-transform group-hover:translate-x-1">↗</span>
+                </a>
+                <!-- YouTube -->
+                <a href="https://www.youtube.com/@yunovax" target="_blank" class="flex items-center justify-between p-4 bg-neutral-950 border border-neutral-900 rounded-lg transition-all duration-300 hover:bg-neutral-900 hover:border-neutral-400 group">
+                    <span class="text-neutral-300 group-hover:text-white font-light">YouTube</span>
+                    <span class="text-neutral-600 group-hover:text-white transition-transform group-hover:translate-x-1">↗</span>
+                </a>
+                <!-- Pinterest / X -->
+                <a href="https://tr.pinterest.com/yunovax/" target="_blank" class="flex items-center justify-between p-4 bg-neutral-950 border border-neutral-900 rounded-lg transition-all duration-300 hover:bg-neutral-900 hover:border-neutral-400 group">
+                    <span class="text-neutral-300 group-hover:text-white font-light">Pinterest / X</span>
+                    <span class="text-neutral-600 group-hover:text-white transition-transform group-hover:translate-x-1">↗</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Topluluk Gruplarım -->
+        <section class="space-y-6">
+            <h2 class="text-xl font-medium tracking-widest uppercase text-neutral-400 flex items-center gap-2">
+                <span class="w-2 h-2 bg-emerald-500 rounded-full inline-block animate-pulse"></span> Topluluk Gruplarım
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Roblox Group -->
+                <a href="https://www.roblox.com/communities/3958018" target="_blank" class="flex items-center justify-between p-5 bg-neutral-950 border border-neutral-900 rounded-xl transition-all duration-300 hover:bg-neutral-900 hover:border-emerald-500 group">
+                    <div>
+                        <h4 class="font-medium group-hover:text-emerald-400 transition-colors">Roblox Geliştirici Grubu</h4>
+                        <p class="text-sm text-neutral-500 font-light mt-1">Projeleri yakından takip et.</p>
+                    </div>
+                    <span class="text-neutral-600 group-hover:text-emerald-400 transition-transform group-hover:translate-x-1">→</span>
+                </a>
+                <!-- Discord -->
+                <a href="discord.com/invite/Bgpnjzx2bc" target="_blank" class="flex items-center justify-between p-5 bg-neutral-950 border border-neutral-900 rounded-xl transition-all duration-300 hover:bg-neutral-900 hover:border-emerald-500 group">
+                    <div>
+                        <h4 class="font-medium group-hover:text-emerald-400 transition-colors">Discord Sunucumuz</h4>
+                        <p class="text-sm text-neutral-500 font-light mt-1 font-light">Topluluğa katıl.</p>
+                    </div>
+                    <span class="text-neutral-600 group-hover:text-emerald-400 transition-transform group-hover:translate-x-1">→</span>
+                </a>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
-    <footer class="text-center p-10 text-gray-600 text-sm">
-        &copy; 2026 Yunus Emre Gedik
+    <footer class="text-center p-16 text-neutral-700 text-sm font-light tracking-wide">
+        &copy; 2026 Yunus Emre Gedik.
     </footer>
 
 </body>
